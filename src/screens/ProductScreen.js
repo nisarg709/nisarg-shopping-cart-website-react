@@ -12,8 +12,6 @@ function ProductScreen(props) {
     const {userInfo} = userSignin;
     const productDetails = useSelector((state) => state.productDetails);
     const {loading, error} = productDetails;
-    const productReviewSave = useSelector((state) => state.productReviewSave);
-    const {success: productSaveSuccess} = productReviewSave;
     const dispatch = useDispatch();
 
     let product = productDetails && productDetails.product && productDetails.product.data ? productDetails.product.data : {};

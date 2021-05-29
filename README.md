@@ -7,5 +7,18 @@ _steps to run the project_
 
 Project will be run on localhost:3000
 
-   
+##@sign-in page use below credentials to login
 
+For User
+
+```
+email - ana.james@example.com
+password - user@123
+```
+
+For shop-user (Admin)
+
+```
+email - dylan.austin@example.com
+password - shop@123
+```

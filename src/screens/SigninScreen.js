@@ -9,7 +9,13 @@ function SigninScreen(props) {
   const userSignin = useSelector(state => state.userSignin);
   const { loading, userInfo, error } = userSignin;
   const dispatch = useDispatch();
-  const redirect = props.location.search ? props.location.search.split("=")[1] : '/home';
+
+  let redirectAt = '/home'
+  if(userInfo && userInfo.data && userInfo.data.role === "shop"){
+    redirectAt = '/products'
+  }
+  const redirect = props.location.search ? props.location.search.split("=")[1] : redirectAt ;
+
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
